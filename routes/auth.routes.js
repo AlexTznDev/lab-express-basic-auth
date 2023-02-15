@@ -96,6 +96,7 @@ router.post("/login", async (req, res, next) => {
     req.session.activeUser = foundUser
     req.session.save(() => {
       res.redirect("/profile")
+
     })
 
 
@@ -107,4 +108,10 @@ router.post("/login", async (req, res, next) => {
   
 })
 
+//CERRANDO CESION 
+router.get("/logout", (req, res, next) => {
+  req.session.destroy(() => {
+    res.redirect("/")
+  })
+})
 module.exports = router;
