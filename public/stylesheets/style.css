@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+.errorMsg {
+  background-color: red;
+  font-size: 20px;
+  color: #fff;
+
+
+}
